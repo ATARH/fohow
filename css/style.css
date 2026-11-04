@@ -59,7 +59,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .btn--lg { padding: 16px 32px; font-size: 16px; }
 .btn--block { width: 100%; }
 
-/* --- Шапка (Светлая, современная) --- */
+/* --- Шапка --- */
 .site-header {
   position: sticky;
   top: 0;
@@ -105,13 +105,14 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transform: translateY(10px);
   transition: all var(--transition);
   border: 1px solid var(--border);
+  z-index: 10;
 }
 .has-sub:hover .submenu { opacity: 1; visibility: visible; transform: translateY(0); }
 .submenu a { display: block; padding: 10px 20px; font-size: 14px; }
 .submenu a:hover { background: var(--bg-light); }
 
 .header__actions { display: flex; align-items: center; gap: 20px; }
-.header-phone { font-weight: 600; font-size: 16px; }
+.header-phone { font-weight: 600; font-size: 16px; white-space: nowrap; }
 .header-phone:hover { color: var(--primary); }
 
 .burger { display: none; width: 30px; height: 20px; position: relative; }
@@ -123,7 +124,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .burger.is-active span:nth-child(2) { opacity: 0; }
 .burger.is-active span:nth-child(3) { transform: rotate(-45deg); top: 9px; }
 
-/* --- Hero (Баннер) --- */
+/* --- Hero --- */
 .hero {
   position: relative;
   padding: 120px 0;
@@ -195,8 +196,35 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .footer__inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
 .logo--footer { font-size: 20px; margin-bottom: 16px; display: block; }
 .footer__col p { color: var(--text-muted); margin-bottom: 8px; font-size: 15px; }
-.footer__col h4 { font-size: 16px; margin-bottom: 16px; }
-.socials { display: flex; flex-direction: column; gap: 8px; }
+.footer__col h4 { font-size: 16px; margin-bottom: 16px; color: var(--primary); }
+
+/* Новые стили для списка контактов */
+.contact-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 15px;
+  border-bottom: 1px dashed var(--border);
+  padding-bottom: 8px;
+}
+.contact-list li:last-child {
+  border-bottom: none;
+}
+.contact-name {
+  font-weight: 600;
+  color: var(--text-main);
+}
+.contact-list a {
+  color: var(--primary);
+  font-weight: 500;
+  transition: color var(--transition);
+}
+.contact-list a:hover {
+  color: var(--accent);
+}
+
+.socials { display: flex; flex-direction: column; gap: 8px; margin-top: 16px; }
 .socials a { color: var(--primary); font-weight: 500; }
 .footer__bottom { border-top: 1px solid var(--border); padding-top: 20px; text-align: center; color: var(--text-muted); font-size: 14px; }
 
@@ -226,5 +254,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .main-nav__list a, .main-nav__list button { font-size: 18px; }
   .submenu { position: static; opacity: 1; visibility: visible; transform: none; box-shadow: none; border: none; padding-left: 16px; display: none; }
   .has-sub.is-open .submenu { display: block; }
-  .header-phone { display: none; }
+  .header-phone { display: none; } /* На телефоне номер в шапке скрываем */
+}
+
+@media (max-width: 480px) {
+  .contact-list li { flex-direction: column; align-items: flex-start; gap: 4px; }
 }

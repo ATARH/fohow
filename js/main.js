@@ -1,42 +1,38 @@
 (() => {
   'use strict';
 
+  // Мобильное меню
   const burger = document.querySelector('.burger');
   const nav = document.getElementById('main-nav');
 
   if (burger && nav) {
     burger.addEventListener('click', () => {
-      const open = nav.classList.toggle('is-open');
-      burger.setAttribute('aria-expanded', String(open));
+      const isOpen = nav.classList.toggle('is-open');
+      burger.classList.toggle('is-active');
+      burger.setAttribute('aria-expanded', String(isOpen));
     });
   }
 
+  // Выпадающие списки в мобильном меню
   document.querySelectorAll('.has-sub > button').forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      if (window.matchMedia('(max-width: 1024px)').matches) {
+      if (window.matchMedia('(max-width: 991px)').matches) {
         e.preventDefault();
         const li = btn.parentElement;
         const wasOpen = li.classList.contains('is-open');
-        li.parentElement.querySelectorAll('.has-sub.is-open').forEach((el) => {
+        
+        // Закрываем другие открытые меню
+        document.querySelectorAll('.has-sub.is-open').forEach((el) => {
           el.classList.remove('is-open');
-          el.querySelector('button')?.setAttribute('aria-expanded', 'false');
         });
+        
+        // Переключаем текущее
         li.classList.toggle('is-open', !wasOpen);
-        btn.setAttribute('aria-expanded', String(!wasOpen));
       }
     });
   });
 
-  const introToggle = document.getElementById('intro-toggle');
-  const introBody = document.getElementById('intro-body');
-  if (introToggle && introBody) {
-    introToggle.addEventListener('click', () => {
-      const open = introBody.classList.toggle('is-open');
-      introToggle.setAttribute('aria-expanded', String(open));
-      introToggle.textContent = open ? 'Свернуть текст' : 'Развернуть текст';
-    });
-  }
-
+  // Модальное окно
   const modal = document.getElementById('request-modal');
   const serviceSelect = document.getElementById('request-service');
 
@@ -44,63 +40,46 @@
     el.addEventListener('click', () => {
       const service = el.getAttribute('data-service');
       if (serviceSelect && service) serviceSelect.value = service;
-      if (modal && typeof modal.showModal === 'function') {
-        modal.showModal();
-      } else if (modal) {
-        modal.setAttribute('open', '');
+      if (modal) modal.showModal();
+      
+      // Закрываем мобильное меню при открытии модалки
+      if (nav) nav.classList.remove('is-open');
+      if (burger) {
+        burger.classList.remove('is-active');
+        burger.setAttribute('aria-expanded', 'false');
       }
-      nav?.classList.remove('is-open');
-      burger?.setAttribute('aria-expanded', 'false');
     });
   });
 
   document.querySelectorAll('[data-modal-close]').forEach((el) => {
     el.addEventListener('click', () => modal?.close());
   });
+  
   modal?.addEventListener('click', (e) => {
     if (e.target === modal) modal.close();
   });
 
-  async function sendForm(form, payload) {
-    const endpoint = form.dataset.endpoint || '';
-    if (!endpoint) {
-      await new Promise((r) => setTimeout(r, 500));
-      return { ok: true, demo: true };
-    }
-    const res = await fetch(endpoint, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: payload
-    });
-    return { ok: res.ok };
-  }
-
+  // Обработка формы (демо)
   const requestForm = document.getElementById('request-form');
   requestForm?.addEventListener('submit', async (e) => {
     e.preventDefault();
     const note = requestForm.querySelector('[data-form-note]');
     const btn = requestForm.querySelector('button[type="submit"]');
+    
     if (!requestForm.reportValidity()) return;
 
     btn.disabled = true;
-    note.textContent = 'Отправляем…';
-    note.dataset.state = '';
-
-    try {
-      const fd = new FormData(requestForm);
-      const { ok, demo } = await sendForm(requestForm, fd);
-      if (ok) {
-        note.textContent = demo ? 'Демо: форма отправлена!' : 'Заявка отправлена. Мы свяжемся с вами.';
-        note.dataset.state = 'success';
-        requestForm.reset();
-      } else {
-        throw new Error('bad');
-      }
-    } catch {
-      note.textContent = 'Не удалось отправить. Попробуйте позже.';
-      note.dataset.state = 'error';
-    } finally {
+    btn.textContent = 'Отправляем...';
+    
+    // Имитация отправки
+    setTimeout(() => {
+      note.textContent = 'Заявка успешно отправлена!';
+      note.style.color = 'green';
+      requestForm.reset();
       btn.disabled = false;
-    }
+      btn.textContent = 'Отправить';
+      
+      setTimeout(() => modal.close(), 2000);
+    }, 1000);
   });
 })();

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Массаж Fohow в Сочи | Империя Fohow</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-top">
+      <div class="container header-top__inner">
+        <a class="logo" href="index.html">ИМПЕРИЯ FOHOW</a>
+        <div class="header-top__center">
+          <ul class="socials socials--header" role="list">
+            <li><a href="https://www.instagram.com/imperiafohow/" target="_blank">IG</a></li>
+            <li><a href="https://t.me/Imperiasintezaseo" target="_blank">TG</a></li>
+          </ul>
+        </div>
+        <div class="header-top__right">
+          <button class="btn btn--text" type="button" data-modal-open="request">Оставить заявку</button>
+          <a class="header-phone" href="tel:+79881480048">+7 (988) 148-00-48</a>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container header-bottom__inner">
+        <button class="burger" type="button" aria-label="Открыть меню"><span></span><span></span><span></span></button>
+        <nav class="main-nav" id="main-nav">
+          <ul class="main-nav__list">
+            <li><a href="index.html">Главная</a></li>
+            <li class="has-sub">
+              <button type="button">Услуги массажа</button>
+              <ul class="submenu">
+                <li><a href="massaj-fohow.html" aria-current="page">Массаж Fohow</a></li>
+                <li><a href="tim-fohow.html">Сеанс капсулой Тим Фохоу</a></li>
+                <li><a href="massaj-lica.html">Массаж лица</a></li>
+              </ul>
+            </li>
+            <li class="has-sub">
+              <button type="button">Блог</button>
+              <ul class="submenu"><li><a href="blog.html">Блог: статьи</a></li></ul>
+            </li>
+            <li class="has-sub">
+              <button type="button">Выезд</button>
+              <ul class="submenu"><li><a href="viezd-na-dom.html">Выезд на дом</a></li></ul>
+            </li>
+            <li class="has-sub">
+              <button type="button">Акции и сертификаты</button>
+              <ul class="submenu"><li><a href="akcii.html">Акции</a></li><li><a href="sertifikat.html">Сертификаты</a></li></ul>
+            </li>
+            <li class="has-sub">
+              <button type="button">О компании</button>
+              <ul class="submenu">
+                <li><a href="okompanii.html">О компании</a></li>
+                <li><a href="stoimost.html">Стоимость</a></li>
+                <li><a href="kontakty.html">Контакты</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Простой баннер для услуги -->
+    <section class="hero hero--main" style="min-height: 50vh;">
+      <div class="hero__media" style="background-image: url('assets/blog-fohow.jpg');"></div>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <h1 class="hero__title">Биоэнергетический Массаж Fohow</h1>
+        <p class="hero__text">Уникальная методика, которая гармонизирует энергию тела и восстанавливает здоровье.</p>
+        <button class="btn btn--primary btn--lg" data-modal-open="request" data-service="Биоэнергетический массаж Fohow">Записаться</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2 class="section__title">Как проходит сеанс?</h2>
+        <p>Здесь будет подробное описание услуги, противопоказания и польза. Мы добавим это позже, когда ты скинешь текст.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__bottom">
+      <p>© 2026, Центр «Империя Fohow» · г. Сочи, ул. Навагинская, 9д, офис 418 · <a href="tel:+79881480048">+7 (988) 148-00-48</a></p>
+    </div>
+  </footer>
+
+  <!-- Модалка -->
+  <dialog class="modal" id="request-modal">
+    <form class="modal__form" id="request-form">
+      <button class="modal__close" type="button" data-modal-close>&times;</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <label class="field"><span>Ваш телефон</span><input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
+      <label class="field"><span>Имя</span><input class="input" type="text" name="name" placeholder="Как к вам обращаться"></label>
+      <label class="field">
+        <span>Услуга</span>
+        <select class="input" name="service" id="request-service">
+          <option>Биоэнергетический массаж Fohow</option>
+          <option>Сеанс капсулой Тим</option>
+        </select>
+      </label>
+      <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+    </form>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

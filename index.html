@@ -26,6 +26,7 @@
         </div>
 
         <div class="header-top__right">
+          <!-- Эта кнопка должна открывать модалку -->
           <button class="btn btn--text" type="button" data-modal-open="request">Оставить заявку</button>
           <a class="header-phone" href="tel:+79881480048">+7 (988) 148-00-48</a>
         </div>
@@ -110,6 +111,7 @@
         </div>
 
         <div class="hero__actions">
+          <!-- Эта кнопка тоже открывает модалку -->
           <button class="btn btn--primary btn--lg" type="button" data-modal-open="request" data-service="Сеанс капсулой Тим">
             Записаться на сеанс
           </button>
@@ -119,7 +121,6 @@
   </main>
 
   <!-- ============ FOOTER ============ -->
-  <!-- Он такой же, как на странице блога -->
   <footer class="site-footer">
     <div class="container site-footer__grid">
       <div>
@@ -168,7 +169,7 @@
     </div>
   </footer>
 
-  <!-- Модальное окно (остается таким же) -->
+  <!-- ============ МОДАЛЬНОЕ ОКНО ЗАЯВКИ ============ -->
   <dialog class="modal" id="request-modal" aria-labelledby="request-title">
     <form class="modal__form" id="request-form" novalidate>
       <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
@@ -192,6 +193,7 @@
     </form>
   </dialog>
 
+  <!-- ПОДКЛЮЧЕНИЕ СКРИПТА -->
   <script src="js/main.js" defer></script>
 </body>
 </html>

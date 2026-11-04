@@ -1,11 +1,6 @@
-alert("Скрипт работает!");
-/* =========================================================
-   Империя Fohow — Сочи — общий скрипт
-   ========================================================= */
 (() => {
   'use strict';
 
-  /* ---------- Мобильное меню ---------- */
   const burger = document.querySelector('.burger');
   const nav = document.getElementById('main-nav');
 
@@ -16,7 +11,6 @@ alert("Скрипт работает!");
     });
   }
 
-  /* ---------- Подменю: клик для тача/мобилки ---------- */
   document.querySelectorAll('.has-sub > button').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       if (window.matchMedia('(max-width: 1024px)').matches) {
@@ -33,7 +27,6 @@ alert("Скрипт работает!");
     });
   });
 
-  /* ---------- Раскрывающийся текст (для блога) ---------- */
   const introToggle = document.getElementById('intro-toggle');
   const introBody = document.getElementById('intro-body');
   if (introToggle && introBody) {
@@ -44,7 +37,6 @@ alert("Скрипт работает!");
     });
   }
 
-  /* ---------- Модалка ---------- */
   const modal = document.getElementById('request-modal');
   const serviceSelect = document.getElementById('request-service');
 
@@ -69,7 +61,6 @@ alert("Скрипт работает!");
     if (e.target === modal) modal.close();
   });
 
-  /* ---------- Отправка форм ---------- */
   async function sendForm(form, payload) {
     const endpoint = form.dataset.endpoint || '';
     if (!endpoint) {
@@ -99,9 +90,7 @@ alert("Скрипт работает!");
       const fd = new FormData(requestForm);
       const { ok, demo } = await sendForm(requestForm, fd);
       if (ok) {
-        note.textContent = demo
-          ? 'Демо: форма отправлена (подключите endpoint).'
-          : 'Заявка отправлена. Мы свяжемся с вами.';
+        note.textContent = demo ? 'Демо: форма отправлена!' : 'Заявка отправлена. Мы свяжемся с вами.';
         note.dataset.state = 'success';
         requestForm.reset();
       } else {
@@ -112,26 +101,6 @@ alert("Скрипт работает!");
       note.dataset.state = 'error';
     } finally {
       btn.disabled = false;
-    }
-  });
-
-  const subscribeForm = document.getElementById('subscribe-form');
-  subscribeForm?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const note = subscribeForm.querySelector('[data-form-note]');
-    if (!subscribeForm.reportValidity()) return;
-    note.textContent = 'Отправляем…';
-    note.dataset.state = '';
-    try {
-      const { ok, demo } = await sendForm(subscribeForm, new FormData(subscribeForm));
-      if (ok) {
-        note.textContent = demo ? 'Демо: подписка оформлена.' : 'Спасибо за подписку!';
-        note.dataset.state = 'success';
-        subscribeForm.reset();
-      } else throw new Error('bad');
-    } catch {
-      note.textContent = 'Ошибка отправки.';
-      note.dataset.state = 'error';
     }
   });
 })();

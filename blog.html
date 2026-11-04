@@ -3,260 +3,168 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Блог — полезные статьи о массаже | Империя Fohow, Сочи</title>
-  <meta name="description" content="Блог центра здоровья «Империя» в Сочи: статьи о массаже, советы и методики. Навагинская 9д, офис 418.">
+  <title>Блог и полезные статьи | Империя Fohow Сочи</title>
+  <meta name="description" content="Полезные статьи о массаже, капсуле Тим и здоровье от специалистов центра Империя Fohow в Сочи.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
 
-  <!-- ============ HEADER (Такой же, как на Главной) ============ -->
-  <header class="site-header" id="site-header">
-    <div class="header-top">
-      <div class="container header-top__inner">
-        <a class="logo" href="index.html">ИМПЕРИЯ FOHOW</a>
-        
-        <div class="header-top__center">
-          <ul class="socials socials--header" role="list">
-            <li><a href="https://www.instagram.com/imperiafohow/" aria-label="Instagram" target="_blank">IG</a></li>
-            <li><a href="https://t.me/Imperiasintezaseo" aria-label="Telegram" target="_blank">TG</a></li>
-            <li><a href="mailto:info@example.com" aria-label="Email">@</a></li>
-          </ul>
-        </div>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Империя Fohow</a>
 
-        <div class="header-top__right">
-          <button class="btn btn--text" type="button" data-modal-open="request">Оставить заявку</button>
-          <a class="header-phone" href="tel:+79881480048">+7 (988) 148-00-48</a>
-        </div>
-      </div>
-    </div>
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          
+          <li class="has-sub">
+            <button type="button">Услуги</button>
+            <ul class="submenu">
+              <li><a href="massaj-fohow.html">Массаж Fohow</a></li>
+              <li><a href="tim-fohow.html">Капсула Тим Фохоу</a></li>
+              <li><a href="massaj-lica.html">Массаж лица</a></li>
+            </ul>
+          </li>
 
-    <div class="header-bottom">
-      <div class="container header-bottom__inner">
+          <li class="has-sub">
+            <button type="button">Блог</button>
+            <ul class="submenu">
+              <li><a href="blog.html" aria-current="page">Статьи</a></li>
+            </ul>
+          </li>
+
+          <li class="has-sub">
+            <button type="button">Выезд</button>
+            <ul class="submenu">
+              <li><a href="viezd-na-dom.html">Выезд на дом</a></li>
+            </ul>
+          </li>
+
+          <li><a href="akcii.html">Акции</a></li>
+          <li><a href="kontakty.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
+        <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
         <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
         </button>
-
-        <nav class="main-nav" id="main-nav" aria-label="Главное меню">
-          <ul class="main-nav__list">
-            <li><a href="index.html">Главная</a></li>
-            
-            <li class="has-sub">
-              <button type="button" aria-expanded="false">Услуги массажа</button>
-              <ul class="submenu">
-                <li><a href="massaj-fohow.html">Массаж Fohow</a></li>
-                <li><a href="tim-fohow.html">Сеанс капсулой Тим Фохоу</a></li>
-                <li><a href="massaj-lica.html">Массаж лица</a></li>
-              </ul>
-            </li>
-
-            <li class="has-sub">
-              <button type="button" aria-expanded="false">Блог</button>
-              <ul class="submenu">
-                <li><a href="blog.html" aria-current="page">Блог: статьи</a></li>
-              </ul>
-            </li>
-
-            <li class="has-sub">
-              <button type="button" aria-expanded="false">Выезд</button>
-              <ul class="submenu">
-                <li><a href="viezd-na-dom.html">Выезд на дом</a></li>
-              </ul>
-            </li>
-
-            <li class="has-sub">
-              <button type="button" aria-expanded="false">Акции и сертификаты</button>
-              <ul class="submenu">
-                <li><a href="akcii.html">Акции</a></li>
-                <li><a href="sertifikat.html">Сертификаты</a></li>
-              </ul>
-            </li>
-
-            <li class="has-sub">
-              <button type="button" aria-expanded="false">О компании</button>
-              <ul class="submenu">
-                <li><a href="okompanii.html">О компании</a></li>
-                <li><a href="stoimost.html">Стоимость</a></li>
-                <li><a href="kontakty.html">Контакты</a></li>
-                <li><a href="vopros-otvet.html">Вопросы и ответы</a></li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   </header>
 
   <main id="main">
-
-    <!-- ============ HERO (Блог) ============ -->
-    <section class="hero">
-      <div class="hero__media" aria-hidden="true"></div>
-      <div class="hero__overlay" aria-hidden="true"></div>
-      <div class="container hero__content">
-        <h1 class="hero__title">
-          <span class="accent-cream">Блог</span> — полезные статьи о массаже
-          <span class="accent-cream">от Империи</span> Fohow в Сочи
-        </h1>
-        <div class="hero__actions">
-          <button class="btn btn--primary btn--lg" type="button"
-                  data-modal-open="request" data-service="">
-            Записаться онлайн
-          </button>
-          <a class="btn btn--ghost btn--lg" href="akcii.html">Акции центра Империя</a>
-        </div>
-        <p class="hero__address">г. Сочи, ул. Навагинская, 9д, офис 418</p>
-      </div>
-    </section>
-
-    <!-- ============ INTRO ============ -->
-    <section class="section intro">
+    <!-- ============ ЗАГОЛОВОК СТРАНИЦЫ ============ -->
+    <section class="page-header">
       <div class="container">
-        <h2 class="section__title">
-          Всё о массаже в <span class="accent-olive">нашем блоге</span> центра Империи
-        </h2>
-
-        <div class="intro__body" id="intro-body">
-          <p>Преимущества массажа в повседневной жизни трудно переоценить. Он помогает не только расслабиться, но и справиться с различными физическими недомоганиями. На этой странице мы рассказываем, почему стоит интегрировать массаж в вашу ежедневную рутину и какими особенностями он обладает.</p>
-          <p>Массаж давно известен своими оздоровительными свойствами: он снижает стресс, улучшает кровообращение, расслабляет мышцы и может облегчить боль. В нашем центре в Сочи мы подбираем технику под ваши задачи — от расслабляющей до биоэнергетической.</p>
-          <p>В блоге вы найдёте советы по выбору подходящего вида массажа, рекомендации по частоте сеансов и ответы на частые вопросы. А записаться можно прямо на сайте или по телефону.</p>
-        </div>
-
-        <button class="link-toggle" type="button" id="intro-toggle"
-                aria-controls="intro-body" aria-expanded="false">
-          Развернуть текст
-        </button>
+        <h1 class="page-title">Полезные статьи</h1>
+        <p class="page-description">Читайте наш блог о массаже, восстановлении организма и секретах отличного самочувствия.</p>
       </div>
     </section>
 
     <!-- ============ СПИСОК СТАТЕЙ ============ -->
-    <section class="section section--soft blog-list">
+    <section class="section">
       <div class="container">
-        <div class="cards-grid">
-          <article class="card">
-            <a class="card__link" href="massaj-fohow.html">
-              <div class="card__media">
-                <img src="assets/blog-fohow.jpg"
-                     alt="Биоэнергетический массаж Fohow"
-                     loading="lazy" decoding="async" width="800" height="500">
-              </div>
-              <div class="card__body">
-                <p class="card__date">14 марта 2026</p>
-                <h3 class="card__title">Биоэнергетический массаж Fohow: новый взгляд на здоровье и гармонию</h3>
-                <p class="card__descr">Откройте для себя биоэнергетический массаж Fohow — методику, которая гармонизирует энергию тела и восстанавливает здоровье.</p>
-              </div>
-            </a>
+        <div class="blog-grid">
+          
+          <!-- Статья 1 -->
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <!-- Пока используем картинку от массажа, потом заменишь на нужную -->
+              <img src="assets/blog-fohow.jpg" alt="Массаж Fohow" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <span class="blog-card__date">14 марта 2026</span>
+              <h2 class="blog-card__title">Биоэнергетический массаж Fohow: новый взгляд на здоровье</h2>
+              <p class="blog-card__excerpt">Откройте для себя методику, которая гармонизирует энергию тела и восстанавливает здоровье на клеточном уровне.</p>
+              <a href="#" class="btn btn--text">Читать далее →</a>
+            </div>
           </article>
+
+          <!-- Статья 2 (Заглушка для примера) -->
+          <article class="blog-card">
+            <div class="blog-card__image" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; min-height: 200px;">
+              <span style="color: #9ca3af;">Скоро здесь будет фото</span>
+            </div>
+            <div class="blog-card__content">
+              <span class="blog-card__date">20 марта 2026</span>
+              <h2 class="blog-card__title">Как стресс влияет на наше тело и как с ним бороться</h2>
+              <p class="blog-card__excerpt">Разбираем механизмы влияния стресса на организм и рассказываем, как массаж помогает вернуть внутренний баланс.</p>
+              <a href="#" class="btn btn--text">Читать далее →</a>
+            </div>
+          </article>
+
+          <!-- Статья 3 (Заглушка для примера) -->
+          <article class="blog-card">
+            <div class="blog-card__image" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; min-height: 200px;">
+              <span style="color: #9ca3af;">Скоро здесь будет фото</span>
+            </div>
+            <div class="blog-card__content">
+              <span class="blog-card__date">5 апреля 2026</span>
+              <h2 class="blog-card__title">Терапевтическая капсула Тим: что это и кому подходит</h2>
+              <p class="blog-card__excerpt">Подробный разбор инновационной разработки Fohow — капсулы ТИМ, ее преимуществ и показаний к применению.</p>
+              <a href="#" class="btn btn--text">Читать далее →</a>
+            </div>
+          </article>
+
         </div>
-      </div>
-    </section>
-
-    <!-- ============ ПРЕИМУЩЕСТВА ============ -->
-    <section class="section features">
-      <div class="container">
-        <h2 class="section__title section__title--center">
-          Преимущества нашего центра здоровья, spa-салона
-          <span class="accent-olive">Империя Fohow в Сочи — забота о вас даже в мелочах</span>
-        </h2>
-
-        <ul class="features__grid" role="list">
-          <li class="feature" style="--bg:url('assets/feature-shower.jpg')">
-            <div class="feature__inner">
-              <h3 class="feature__title">Приятный душ</h3>
-              <p class="feature__text">Возможность принять душ и расслабиться до сеанса.</p>
-              <button class="btn btn--outline btn--sm" type="button" data-modal-open="request" data-service="Массаж Fohow">Записаться</button>
-            </div>
-          </li>
-
-          <li class="feature" style="--bg:url('assets/feature-talk.jpg')">
-            <div class="feature__inner">
-              <h3 class="feature__title">Тёплое общение</h3>
-              <p class="feature__text">Живое открытое общение на интересующие вас темы.</p>
-              <button class="btn btn--outline btn--sm" type="button" data-modal-open="request" data-service="Массаж Fohow">Записаться</button>
-            </div>
-          </li>
-
-          <li class="feature" style="--bg:url('assets/feature-tea.jpg')">
-            <div class="feature__inner">
-              <h3 class="feature__title">Вкусный чай</h3>
-              <p class="feature__text">Выпить чашечку бодрящего и тонизирующего чая.</p>
-              <button class="btn btn--outline btn--sm" type="button" data-modal-open="request" data-service="Массаж Fohow">Записаться</button>
-            </div>
-          </li>
-        </ul>
       </div>
     </section>
   </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container site-footer__grid">
-      <div>
-        <h3 class="site-footer__heading"><a href="massaj-fohow.html">Массаж Fohow</a></h3>
-        <ul class="site-footer__list">
-          <li><a href="tim-fohow.html">Сеанс капсулой</a></li>
-          <li><a href="massaj-lica.html">Массаж лица</a></li>
-          <li><a href="viezd-na-dom.html">Выезд специалиста</a></li>
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a class="logo logo--footer" href="index.html">Империя Fohow</a>
+        <p>Центр здоровья и восстановления в самом сердце Сочи.</p>
+      </div>
+      
+      <div class="footer__col">
+        <h4>Наши специалисты</h4>
+        <ul class="contact-list">
+          <li><span class="contact-name">Ирина</span><a href="tel:+79881480048">+7 (988) 148-00-48</a></li>
+          <li><span class="contact-name">Алёна</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
+          <li><span class="contact-name">Иван</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
         </ul>
       </div>
-      <div>
-        <h3 class="site-footer__heading">Адрес</h3>
-        <ul class="site-footer__list">
-          <li>г. Сочи,<br>ул. Навагинская, 9д,<br>офис 418</li>
-          <li><a href="tel:+79881480048">+7 (988) 148-00-48</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="site-footer__heading"><a href="kontakty.html">Контакты</a></h3>
-        <ul class="site-footer__list">
-          <li><a href="blog.html">Блог</a></li>
-          <li><a href="stoimost.html">Стоимость</a></li>
-          <li><a href="karta-saita.html">Карта сайта</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="site-footer__heading">Подписывайтесь</h3>
-        <form class="subscribe-form" id="subscribe-form" novalidate>
-          <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
-          <input class="input" type="email" id="subscribe-email" name="email" placeholder="Ваш e-mail" required>
-          <button class="btn btn--icon" type="submit" aria-label="Подписаться">
-            <svg width="20" height="20" viewBox="0 0 25 21" aria-hidden="true"><path fill="currentColor" d="M0 21.4l25-10.7L0 0v8.3l17.9 2.4L0 13.1v8.3z"/></svg>
-          </button>
-          <p class="form-note" data-form-note></p>
-        </form>
-        <ul class="socials" role="list">
-          <li><a href="https://www.instagram.com/imperiafohow/" aria-label="Instagram" rel="noopener" target="_blank">IG</a></li>
-          <li><a href="https://t.me/Imperiasintezaseo" aria-label="Telegram" rel="noopener" target="_blank">TG</a></li>
-          <li><a href="tel:+79881480048" aria-label="Телефон">☎</a></li>
-          <li><a href="https://vk.com/imperiasi" aria-label="VK" rel="noopener" target="_blank">VK</a></li>
-        </ul>
+      
+      <div class="footer__col">
+        <h4>Адрес</h4>
+        <p>г. Сочи, ул. Навагинская, 9д, офис 418</p>
+        <div class="socials">
+          <a href="https://t.me/Imperiasintezaseo" target="_blank">Telegram</a>
+          <a href="https://www.instagram.com/imperiafohow/" target="_blank">Instagram</a>
+        </div>
       </div>
     </div>
-    <div class="container site-footer__bottom">
-      <p>© 2026, Центр «Империя Fohow» · г. Сочи, ул. Навагинская, 9д, офис 418 · <a href="tel:+79881480048">+7 (988) 148-00-48</a></p>
+    <div class="container footer__bottom">
+      <p>© 2026 Центр «Империя Fohow». Все права защищены.</p>
     </div>
   </footer>
 
-  <!-- ============ МОДАЛЬНОЕ ОКНО ЗАЯВКИ ============ -->
-  <dialog class="modal" id="request-modal" aria-labelledby="request-title">
+  <!-- ============ МОДАЛЬНОЕ ОКНО ============ -->
+  <dialog class="modal" id="request-modal">
     <form class="modal__form" id="request-form" novalidate>
       <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
-      <h2 class="modal__title" id="request-title">Оставьте заявку</h2>
-      <p class="modal__descr">Ваши контакты будут отправлены после нажатия кнопки «Отправить».</p>
-      <label class="field"><span>Ваш телефон</span><input class="input" type="tel" name="phone" required autocomplete="tel" placeholder="+7 (___) ___-__-__"></label>
-      <label class="field"><span>Имя</span><input class="input" type="text" name="name" autocomplete="name" placeholder="Как к вам обращаться"></label>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <p class="modal__descr">Мы свяжемся с вами, чтобы подтвердить запись.</p>
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required placeholder="Как к вам обращаться"></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
       <label class="field">
         <span>Услуга</span>
         <select class="input" name="service" id="request-service">
-          <option value="">Выберите вариант</option>
+          <option value="">Выберите услугу</option>
           <option>Биоэнергетический массаж Fohow</option>
           <option>Сеанс капсулой Тим</option>
           <option>Массаж лица</option>
-          <option>Вызов на дом</option>
         </select>
       </label>
-      <label class="field"><span>Дата и время</span><input class="input" type="text" name="when" placeholder="Напишите желаемую дату и время"></label>
-      <button class="btn btn--primary btn--block" type="submit">Отправить заявку</button>
+      <button class="btn btn--primary btn--block" type="submit">Отправить</button>
       <p class="form-note" data-form-note></p>
     </form>
   </dialog>

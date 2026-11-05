@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Массаж лица в Сочи | Империя</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Империя Fohow</a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li class="has-sub">
+            <button type="button">Услуги</button>
+            <ul class="submenu">
+              <li><a href="massaj-fohow.html">Массаж Fohow</a></li>
+              <li><a href="tim-fohow.html">Капсула Тим Фохоу</a></li>
+              <li><a href="massaj-lica.html" aria-current="page">Массаж лица</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Блог</button>
+            <ul class="submenu"><li><a href="blog.html">Статьи</a></li></ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Продукция</button>
+            <ul class="submenu"><li><a href="produkciya.html">Каталог товаров</a></li></ul>
+          </li>
+          <li><a href="akcii.html">Акции</a></li>
+          <li><a href="kontakty.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
+        <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Массаж лица</h1>
+        <p class="page-description">SPA-процедура для вашей красоты и молодости.</p>
+      </div>
+    </section>
+
+    <section class="content-block">
+      <div class="container content-block__inner">
+        <div class="content-block__image" style="background: #f3f4f6; display: flex; align-items: center; justify-content: center; min-height: 300px;">
+           <span style="color: #9ca3af;">Фото процедуры</span>
+        </div>
+        <div class="content-block__text">
+          <h2>Забота о коже</h2>
+          <p>Массаж лица Fohow помогает расслабиться, снять стресс и улучшить состояние кожи. Улучшает микроциркуляцию крови, повышает тонус и эластичность.</p>
+          <p>Сеанс способствует глубокому очищению кожи, сокращению морщин и увлажнению на новом уровне.</p>
+          <div style="margin-top: 32px; padding: 24px; background: var(--bg-light); border-radius: var(--radius); border: 1px solid var(--border);">
+            <h3 style="color: var(--primary); margin-bottom: 12px;">Стоимость</h3>
+            <p><strong>Первый сеанс:</strong> от 1 500 ₽</p>
+            <button class="btn btn--primary" style="margin-top: 16px;" data-modal-open="request" data-service="Массаж лица">Записаться</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__bottom"><p>© 2026 Центр «Империя Fohow».</p></div>
+  </footer>
+
+  <dialog class="modal" id="request-modal">
+    <form class="modal__form" id="request-form" novalidate>
+      <button class="modal__close" type="button" data-modal-close>&times;</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required></label>
+      <button class="btn btn--primary btn--block" type="submit">Отправить</button>
+    </form>
+  </dialog>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

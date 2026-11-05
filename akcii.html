@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Акции | Империя Fohow Сочи</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Империя Fohow</a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li class="has-sub">
+            <button type="button">Услуги</button>
+            <ul class="submenu">
+              <li><a href="massaj-fohow.html">Массаж Fohow</a></li>
+              <li><a href="tim-fohow.html">Капсула Тим Фохоу</a></li>
+              <li><a href="massaj-lica.html">Массаж лица</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Блог</button>
+            <ul class="submenu"><li><a href="blog.html">Статьи</a></li></ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Продукция</button>
+            <ul class="submenu"><li><a href="produkciya.html">Каталог товаров</a></li></ul>
+          </li>
+          <li><a href="akcii.html" aria-current="page">Акции</a></li>
+          <li><a href="kontakty.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
+        <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title">Акции и специальные предложения</h1>
+        <p class="page-description">Выгодные предложения для вашего здоровья и красоты.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="services-grid">
+          <div class="service-card">
+            <h3>Скидка на время приёма</h3>
+            <p>Скидка 10% на сеансы в будние дни с 10:00 до 15:00.</p>
+            <button class="btn btn--text" data-modal-open="request" data-service="Акция: Скидка на время">Записаться →</button>
+          </div>
+          <div class="service-card">
+            <h3>День Рождения</h3>
+            <p>Скидка 20% за 5 дней до, в день рождения и 5 дней после!</p>
+            <button class="btn btn--text" data-modal-open="request" data-service="Акция: День Рождения">Записаться →</button>
+          </div>
+          <div class="service-card">
+            <h3>Абонементы</h3>
+            <p>Скидка 10% на абонементы от 5 сеансов и 16% при оплате 10 сеансов.</p>
+            <button class="btn btn--text" data-modal-open="request" data-service="Акция: Абонемент">Записаться →</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__bottom"><p>© 2026 Центр «Империя Fohow».</p></div>
+  </footer>
+
+  <dialog class="modal" id="request-modal">
+    <form class="modal__form" id="request-form" novalidate>
+      <button class="modal__close" type="button" data-modal-close>&times;</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required></label>
+      <button class="btn btn--primary btn--block" type="submit">Отправить</button>
+    </form>
+  </dialog>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

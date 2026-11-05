@@ -4,19 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Контакты | Империя Fohow в Сочи</title>
-  <meta name="description" content="Контакты центра здоровья Империя Fohow в Сочи. Адрес: ул. Навагинская, 9д, офис 418. Телефон +7 (988) 148-00-48.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ============ HEADER (Такой же, как везде) ============ -->
-    <header class="site-header">
+  <header class="site-header">
     <div class="container header__inner">
       <a class="logo" href="index.html">Империя Fohow</a>
-
       <nav class="main-nav" id="main-nav">
         <ul class="main-nav__list">
           <li><a href="index.html">Главная</a></li>
-          
           <li class="has-sub">
             <button type="button">Услуги</button>
             <ul class="submenu">
@@ -25,44 +21,26 @@
               <li><a href="massaj-lica.html">Массаж лица</a></li>
             </ul>
           </li>
-
           <li class="has-sub">
             <button type="button">Блог</button>
-            <ul class="submenu">
-              <li><a href="blog.html">Статьи</a></li>
-            </ul>
+            <ul class="submenu"><li><a href="blog.html">Статьи</a></li></ul>
           </li>
-
           <li class="has-sub">
             <button type="button">Продукция</button>
-            <ul class="submenu">
-              <li><a href="produkciya.html">Каталог товаров</a></li>
-            </ul>
+            <ul class="submenu"><li><a href="produkciya.html">Каталог товаров</a></li></ul>
           </li>
-
-          <li class="has-sub">
-            <button type="button">Выезд</button>
-            <ul class="submenu">
-              <li><a href="viezd-na-dom.html">Выезд на дом</a></li>
-            </ul>
-          </li>
-
           <li><a href="akcii.html">Акции</a></li>
-          <li><a href="kontakty.html">Контакты</a></li>
+          <li><a href="kontakty.html" aria-current="page">Контакты</a></li>
         </ul>
       </nav>
-
       <div class="header__actions">
         <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
         <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
-        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
-          <span></span><span></span><span></span>
-        </button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
       </div>
     </div>
-    </header>
+  </header>
 
-  <!-- ============ КОНТЕНТ ============ -->
   <main>
     <section class="page-header">
       <div class="container">
@@ -73,15 +51,12 @@
 
     <section class="container">
       <div class="contacts-grid">
-        <!-- Левая колонка с контактами -->
         <div class="contact-card">
           <h3>Как нас найти</h3>
-          
           <div class="contact-item">
             <div class="contact-item__label">Адрес</div>
             <div class="contact-item__value">г. Сочи, ул. Навагинская, 9д, офис 418</div>
           </div>
-          
           <div class="contact-item">
             <div class="contact-item__label">Телефоны для связи</div>
             <div class="contact-item__value">
@@ -90,71 +65,31 @@
               <p><a href="tel:+79881434998">+7 (988) 143-49-98</a> — Иван</p>
             </div>
           </div>
-
           <div class="contact-item">
             <div class="contact-item__label">Режим работы</div>
             <div class="contact-item__value">Ежедневно с 10:00 до 20:00</div>
           </div>
-
-          <div class="contact-item" style="margin-bottom: 0;">
-            <div class="contact-item__label">Мы в социальных сетях</div>
-            <div class="socials" style="flex-direction: row; gap: 16px;">
-              <a href="https://t.me/Imperiasintezaseo" target="_blank">Telegram</a>
-              <a href="https://www.instagram.com/imperiafohow/" target="_blank">Instagram</a>
-            </div>
-          </div>
         </div>
-
-        <!-- Правая колонка с картой -->
         <div class="map-wrapper">
-          <!-- Это Яндекс.Карта (центр Сочи). Чтобы поставить точку, зайди в конструктор карт Яндекса, введи свой адрес и скопируй новый iframe сюда -->
           <iframe src="https://yandex.ru/map-widget/v1/?ll=39.723491%2C43.585550&mode=search&oid=116122163030&ol=biz&z=16" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
-    <div class="container footer__inner">
-      <div class="footer__col">
-        <a class="logo logo--footer" href="index.html">Империя Fohow</a>
-        <p>Центр здоровья и восстановления в самом сердце Сочи.</p>
-      </div>
-      <div class="footer__col">
-        <h4>Наши специалисты</h4>
-        <ul class="contact-list">
-          <li><span class="contact-name">Ирина</span><a href="tel:+79881480048">+7 (988) 148-00-48</a></li>
-          <li><span class="contact-name">Алёна</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
-          <li><span class="contact-name">Иван</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
-        </ul>
-      </div>
-      <div class="footer__col">
-        <h4>Адрес</h4>
-        <p>г. Сочи, ул. Навагинская, 9д, офис 418</p>
-        <div class="socials">
-          <a href="https://t.me/Imperiasintezaseo" target="_blank">Telegram</a>
-          <a href="https://www.instagram.com/imperiafohow/" target="_blank">Instagram</a>
-        </div>
-      </div>
-    </div>
-    <div class="container footer__bottom">
-      <p>© 2026 Центр «Империя Fohow». Все права защищены.</p>
-    </div>
+    <div class="container footer__bottom"><p>© 2026 Центр «Империя Fohow».</p></div>
   </footer>
 
-  <!-- Модалка -->
   <dialog class="modal" id="request-modal">
     <form class="modal__form" id="request-form" novalidate>
-      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
+      <button class="modal__close" type="button" data-modal-close>&times;</button>
       <h2 class="modal__title">Оставьте заявку</h2>
-      <p class="modal__descr">Мы свяжемся с вами, чтобы подтвердить запись.</p>
-      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required placeholder="Как к вам обращаться"></label>
-      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required></label>
       <button class="btn btn--primary btn--block" type="submit">Отправить</button>
     </form>
   </dialog>
-
   <script src="js/main.js" defer></script>
 </body>
 </html>

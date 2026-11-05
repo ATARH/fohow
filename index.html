@@ -8,15 +8,12 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- ============ HEADER ============ -->
   <header class="site-header">
     <div class="container header__inner">
       <a class="logo" href="index.html">Империя Fohow</a>
-
       <nav class="main-nav" id="main-nav">
-                <ul class="main-nav__list">
-          <li><a href="index.html">Главная</a></li>
-          
+        <ul class="main-nav__list">
+          <li><a href="index.html" aria-current="page">Главная</a></li>
           <li class="has-sub">
             <button type="button">Услуги</button>
             <ul class="submenu">
@@ -25,27 +22,22 @@
               <li><a href="massaj-lica.html">Массаж лица</a></li>
             </ul>
           </li>
-
           <li class="has-sub">
             <button type="button">Блог</button>
-            <ul class="submenu"><li><a href="blog.html">Статьи</a></li></ul>
+            <ul class="submenu">
+              <li><a href="blog.html">Статьи</a></li>
+            </ul>
           </li>
-
           <li class="has-sub">
             <button type="button">Продукция</button>
-            <ul class="submenu"><li><a href="produkciya.html">Каталог товаров</a></li></ul>
+            <ul class="submenu">
+              <li><a href="produkciya.html">Каталог товаров</a></li>
+            </ul>
           </li>
-
-          <li class="has-sub">
-            <button type="button">Выезд</button>
-            <ul class="submenu"><li><a href="viezd-na-dom.html">Выезд на дом</a></li></ul>
-          </li>
-
           <li><a href="akcii.html">Акции</a></li>
           <li><a href="kontakty.html">Контакты</a></li>
-                </ul>
+        </ul>
       </nav>
-
       <div class="header__actions">
         <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
         <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
@@ -57,29 +49,20 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="hero__bg" style="background-image: url('assets/hero-capsule.jpg');"></div>
       <div class="hero__overlay"></div>
-      
       <div class="container hero__content">
         <div class="hero__badge">Центр здоровья в Сочи</div>
         <h1 class="hero__title">Массаж для улучшения здоровья и восстановления сил капсулой Fohow</h1>
-        
-        <p class="hero__text">
-          ТИМ (Терапевтическая Иммунная Массажная капсула) — это инновационное устройство, которое объединяет в себе преимущества традиций и современных технологий для воздействия на организм.
-        </p>
-
+        <p class="hero__text">ТИМ (Терапевтическая Иммунная Массажная капсула) — это инновационное устройство, которое объединяет в себе преимущества традиций и современных технологий для воздействия на организм.</p>
         <div class="hero__actions">
-          <button class="btn btn--primary btn--lg" type="button" data-modal-open="request" data-service="Сеанс капсулой Тим">
-            Записаться на сеанс
-          </button>
+          <button class="btn btn--primary btn--lg" type="button" data-modal-open="request" data-service="Сеанс капсулой Тим">Записаться на сеанс</button>
           <a class="btn btn--outline btn--lg" href="#services">Узнать подробнее</a>
         </div>
       </div>
     </section>
 
-    <!-- ============ УСЛУГИ ============ -->
     <section class="section" id="services">
       <div class="container">
         <h2 class="section-title">Наши услуги</h2>
@@ -87,31 +70,29 @@
           <div class="service-card">
             <h3>Массаж Fohow</h3>
             <p>Биоэнергетический массаж для гармонии тела и души.</p>
-            <button class="btn btn--text" data-modal-open="request" data-service="Массаж Fohow">Записаться →</button>
+            <a href="massaj-fohow.html" class="btn btn--text">Подробнее →</a>
           </div>
           <div class="service-card">
             <h3>Капсула Тим</h3>
             <p>Терапевтическая иммунная капсула для восстановления сил.</p>
-            <button class="btn btn--text" data-modal-open="request" data-service="Капсула Тим">Записаться →</button>
+            <a href="tim-fohow.html" class="btn btn--text">Подробнее →</a>
           </div>
           <div class="service-card">
             <h3>Массаж лица</h3>
             <p>Расслабляющий и омолаживающий уход за кожей.</p>
-            <button class="btn btn--text" data-modal-open="request" data-service="Массаж лица">Записаться →</button>
+            <a href="massaj-lica.html" class="btn btn--text">Подробнее →</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="site-footer">
     <div class="container footer__inner">
       <div class="footer__col">
         <a class="logo logo--footer" href="index.html">Империя Fohow</a>
         <p>Центр здоровья и восстановления в самом сердце Сочи.</p>
       </div>
-      
       <div class="footer__col">
         <h4>Наши специалисты</h4>
         <ul class="contact-list">
@@ -120,7 +101,6 @@
           <li><span class="contact-name">Иван</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
         </ul>
       </div>
-      
       <div class="footer__col">
         <h4>Адрес</h4>
         <p>г. Сочи, ул. Навагинская, 9д, офис 418</p>
@@ -135,23 +115,13 @@
     </div>
   </footer>
 
-  <!-- ============ МОДАЛЬНОЕ ОКНО ============ -->
   <dialog class="modal" id="request-modal">
     <form class="modal__form" id="request-form" novalidate>
       <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
       <h2 class="modal__title">Оставьте заявку</h2>
       <p class="modal__descr">Мы свяжемся с вами, чтобы подтвердить запись.</p>
-      
-      <label class="field">
-        <span>Ваше имя</span>
-        <input class="input" type="text" name="name" required placeholder="Как к вам обращаться">
-      </label>
-      
-      <label class="field">
-        <span>Телефон</span>
-        <input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__">
-      </label>
-      
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required placeholder="Как к вам обращаться"></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
       <label class="field">
         <span>Услуга</span>
         <select class="input" name="service" id="request-service">
@@ -161,7 +131,6 @@
           <option>Массаж лица</option>
         </select>
       </label>
-
       <button class="btn btn--primary btn--block" type="submit">Отправить</button>
       <p class="form-note" data-form-note></p>
     </form>

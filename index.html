@@ -6,6 +6,45 @@
   <title>Центр здоровья Империя Fohow в Сочи | Массаж и СПА</title>
   <meta name="description" content="Центр здоровья и восстановления Империя Fohow в Сочи. Профессиональный массаж, капсула Тим, уход за лицом. Навагинская 9д.">
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Стили для карточек с картинками на главной */
+    .img-card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .img-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+    .img-card__img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+    }
+    .img-card__content {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .img-card__content h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--primary);
+    }
+    .img-card__content p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+  </style>
 </head>
 <body>
   <!-- ============ HEADER ============ -->
@@ -33,6 +72,7 @@
             <button type="button">Продукция</button>
             <ul class="submenu">
               <li><a href="produkciya.html">Каталог товаров</a></li>
+              <li><a href="bio-massager.html">Биоэнергомассажер 3.0</a></li>
             </ul>
           </li>
           <li><a href="akcii.html">Акции</a></li>
@@ -50,9 +90,8 @@
   </header>
 
   <main id="main">
-    <!-- ============ HERO (Общий для главной) ============ -->
+    <!-- ============ HERO ============ -->
     <section class="hero">
-      <!-- Если у тебя есть общее фото салона или кабинета, назови его main-bg.jpg и поменяй путь ниже -->
       <div class="hero__bg" style="background-image: url('assets/hero-capsule.jpg');"></div>
       <div class="hero__overlay"></div>
       
@@ -87,26 +126,52 @@
       </div>
     </div>
 
-    <!-- ============ УСЛУГИ ============ -->
+    <!-- ============ УСЛУГИ (С КАРТИНКАМИ) ============ -->
     <section class="section" id="services">
       <div class="container">
         <h2 class="section-title">Наши услуги</h2>
         <div class="services-grid">
-          <div class="service-card">
-            <h3>Массаж Fohow</h3>
-            <p>Биоэнергетический массаж для гармонии тела, снятия болей и восстановления энергии.</p>
-            <a href="massaj-fohow.html" class="btn btn--text">Подробнее →</a>
+          
+          <!-- Карточка 1 -->
+          <div class="img-card">
+            <img src="assets/icon-massage.jpg" alt="Массаж Fohow" class="img-card__img">
+            <div class="img-card__content">
+              <h3>Массаж Fohow</h3>
+              <p>Биоэнергетический массаж для гармонии тела, снятия болей и восстановления энергии.</p>
+              <a href="massaj-fohow.html" class="btn btn--outline">Подробнее →</a>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Капсула Тим</h3>
-            <p>Терапевтическая иммунная капсула для глубокого прогрева, детоксикации и восстановления сил.</p>
-            <a href="tim-fohow.html" class="btn btn--text">Подробнее →</a>
+
+          <!-- Карточка 2 -->
+          <div class="img-card">
+            <img src="assets/icon-tim.jpg" alt="Капсула Тим" class="img-card__img">
+            <div class="img-card__content">
+              <h3>Капсула Тим</h3>
+              <p>Терапевтическая иммунная капсула для глубокого прогрева, детоксикации и восстановления сил.</p>
+              <a href="tim-fohow.html" class="btn btn--outline">Подробнее →</a>
+            </div>
           </div>
-          <div class="service-card">
-            <h3>Массаж лица</h3>
-            <p>Расслабляющий и омолаживающий уход за кожей, улучшение микроциркуляции и тонуса.</p>
-            <a href="massaj-lica.html" class="btn btn--text">Подробнее →</a>
+
+          <!-- Карточка 3 -->
+          <div class="img-card">
+            <img src="assets/icon-face.jpg" alt="Массаж лица" class="img-card__img">
+            <div class="img-card__content">
+              <h3>Массаж лица</h3>
+              <p>Расслабляющий и омолаживающий уход за кожей, улучшение микроциркуляции и тонуса.</p>
+              <a href="massaj-lica.html" class="btn btn--outline">Подробнее →</a>
+            </div>
           </div>
+
+          <!-- Карточка 4 -->
+          <div class="img-card">
+            <img src="assets/icon-bio.jpg" alt="Биоэнергомассажер 3.0" class="img-card__img">
+            <div class="img-card__content">
+              <h3>Биоэнергомассажер 3.0</h3>
+              <p>Инновационный прибор с ультразвуковой насадкой для омоложения и здоровья дома.</p>
+              <a href="bio-massager.html" class="btn btn--outline">Подробнее →</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -156,6 +221,7 @@
           <option>Биоэнергетический массаж Fohow</option>
           <option>Сеанс капсулой Тим</option>
           <option>Массаж лица</option>
+          <option>Биоэнергомассажер 3.0</option>
         </select>
       </label>
       <button class="btn btn--primary btn--block" type="submit">Отправить</button>

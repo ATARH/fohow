@@ -2,12 +2,27 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title>Центр здоровья Империя Fohow в Сочи | Массаж и СПА</title>
   <meta name="description" content="Центр здоровья и восстановления Империя Fohow в Сочи. Профессиональный массаж, капсула Тим, уход за лицом. Навагинская 9д.">
+  
+  <!-- Favicon и Превью -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Империя Fohow в Сочи">
+  <meta property="og:description" content="Массаж, восстановление и здоровье в центре Сочи. Записывайтесь на сеанс!">
+  <meta property="og:image" content="https://atarh.github.io/fohow/assets/hero-capsule.jpg">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* Стили для карточек с картинками на главной */
+    /* --- Защита от горизонтальной прокрутки --- */
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* --- Стили для карточек с картинками --- */
     .img-card {
       background: white;
       border-radius: var(--radius);
@@ -44,15 +59,24 @@
       margin-bottom: 24px;
       flex-grow: 1;
     }
+
+    /* --- УМНАЯ КАРТИНКА ДЛЯ ГЛАВНОЙ (ПК и Телефон) --- */
+    .hero__bg {
+      /* По умолчанию (для ПК) показываем широкую картинку */
+      background-image: url('assets/hero-capsule.jpg');
+      background-position: center center;
+      background-size: cover;
+    }
+    
+    /* Если экран меньше 768px (телефон), показываем вертикальную картинку */
+    @media (max-width: 768px) {
+      .hero__bg {
+        background-image: url('assets/hero-capsule-mobile.jpg');
+        /* "center top" означает, что картинка прижмется к верху, чтобы было видно лицо */
+        background-position: center top; 
+      }
+    }
   </style>
-    <!-- Иконка на вкладке (Favicon) -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  
-  <!-- Превью для соцсетей, Telegram и WhatsApp -->
-  <meta property="og:title" content="Империя Fohow в Сочи">
-  <meta property="og:description" content="Массаж, восстановление и здоровье в центре Сочи. Записывайтесь на сеанс!">
-  <meta property="og:image" content="https://atarh.github.io/fohow/assets/hero-capsule.jpg">
-  <meta property="og:type" content="website">
 </head>
 <body>
   <!-- ============ HEADER ============ -->
@@ -100,7 +124,8 @@
   <main id="main">
     <!-- ============ HERO ============ -->
     <section class="hero">
-      <div class="hero__bg" style="background-image: url('assets/hero-capsule.jpg');"></div>
+      <!-- Убрали inline-стиль, теперь картинка управляется из CSS выше -->
+      <div class="hero__bg"></div>
       <div class="hero__overlay"></div>
       
       <div class="container hero__content">
@@ -134,13 +159,12 @@
       </div>
     </div>
 
-    <!-- ============ УСЛУГИ (С КАРТИНКАМИ) ============ -->
+    <!-- ============ УСЛУГИ ============ -->
     <section class="section" id="services">
       <div class="container">
         <h2 class="section-title">Наши услуги</h2>
         <div class="services-grid">
           
-          <!-- Карточка 1 -->
           <div class="img-card">
             <img src="assets/icon-massage.jpg" alt="Массаж Fohow" class="img-card__img">
             <div class="img-card__content">
@@ -150,7 +174,6 @@
             </div>
           </div>
 
-          <!-- Карточка 2 -->
           <div class="img-card">
             <img src="assets/icon-tim.jpg" alt="Капсула Тим" class="img-card__img">
             <div class="img-card__content">
@@ -160,7 +183,6 @@
             </div>
           </div>
 
-          <!-- Карточка 3 -->
           <div class="img-card">
             <img src="assets/icon-face.jpg" alt="Массаж лица" class="img-card__img">
             <div class="img-card__content">
@@ -170,7 +192,6 @@
             </div>
           </div>
 
-          <!-- Карточка 4 -->
           <div class="img-card">
             <img src="assets/icon-bio.jpg" alt="Биоэнергомассажер 3.0" class="img-card__img">
             <div class="img-card__content">

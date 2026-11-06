@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Биоэнергомассажер Fohow 3.0 | Империя Сочи</title>
+  <meta name="description" content="Биоэнергомассажер Fohow 3.0 - новое поколение здоровья и красоты. Ультразвуковая насадка, гель для лица и тела.">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Стили специально для страницы БЭМ 3.0 */
+    .gold-page { background-color: #fcfaf7; }
+    .gold-block { padding: 60px 0; }
+    .gold-block__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .gold-image {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+      overflow: hidden;
+      background: #fff;
+    }
+    .gold-image img { width: 100%; height: auto; display: block; object-fit: cover; }
+    .gold-text h2 { color: #8c6e32; font-size: 28px; margin-bottom: 20px; }
+    .gold-text h3 { color: #8c6e32; font-size: 22px; margin-top: 24px; margin-bottom: 16px; }
+    .gold-text p { font-size: 16px; margin-bottom: 16px; color: #333; line-height: 1.7; }
+    
+    /* Галерея инфографики */
+    .infographic-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+    @media (min-width: 768px) {
+      .infographic-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .infographic-grid img {
+      width: 100%;
+      display: block;
+      border-radius: var(--radius);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border: 1px solid #e8dfc8;
+    }
+
+    /* Аккордеон для текста */
+    .acc-item {
+      background: #fff;
+      border: 1px solid #e8dfc8;
+      border-radius: 8px;
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .acc-header {
+      width: 100%;
+      text-align: left;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #8c6e32;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      background: #fdfbf7;
+    }
+    .acc-header:hover { background: #f6eedc; }
+    .acc-header::after {
+      content: "+";
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .acc-item.is-open .acc-header::after { content: "−"; }
+    .acc-content {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      color: #555;
+    }
+    .acc-item.is-open .acc-content {
+      padding: 0 20px 20px 20px;
+      max-height: 2000px; /* Достаточно для любого текста */
+    }
+    .acc-content p { margin-bottom: 10px; font-size: 15px; }
+    .acc-content ul { padding-left: 20px; margin-bottom: 10px; font-size: 15px; }
+
+    /* В два столбца на ПК */
+    @media (min-width: 992px) {
+      .gold-block__inner.row-layout { flex-direction: row; align-items: center; }
+      .gold-block__inner.row-layout .gold-image { flex: 1.2; }
+      .gold-block__inner.row-layout .gold-text { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header__inner">
+      <a class="logo" href="index.html">Империя Fohow</a>
+      <nav class="main-nav" id="main-nav">
+        <ul class="main-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li class="has-sub">
+            <button type="button">Услуги</button>
+            <ul class="submenu">
+              <li><a href="massaj-fohow.html">Массаж Fohow</a></li>
+              <li><a href="tim-fohow.html">Капсула Тим Фохоу</a></li>
+              <li><a href="massaj-lica.html">Массаж лица</a></li>
+            </ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Блог</button>
+            <ul class="submenu"><li><a href="blog.html">Статьи</a></li></ul>
+          </li>
+          <li class="has-sub">
+            <button type="button">Продукция</button>
+            <ul class="submenu">
+              <li><a href="produkciya.html">Каталог товаров</a></li>
+              <li><a href="bio-massager.html" aria-current="page">Биоэнергомассажер 3.0</a></li>
+            </ul>
+          </li>
+          <li><a href="akcii.html">Акции</a></li>
+          <li><a href="kontakty.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a class="header-phone" href="tel:+79881480048">Ирина: +7 (988) 148-00-48</a>
+        <button class="btn btn--primary" type="button" data-modal-open="request">Записаться</button>
+        <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ КОНТЕНТ ============ -->
+  <main class="gold-page">
+    
+    <!-- Заголовок -->
+    <section class="page-header" style="background: #fdfbf7; border-bottom: 1px solid #e8dfc8;">
+      <div class="container">
+        <h1 class="page-title" style="color: #8c6e32;">Биоэнергомассажер Fohow 3.0</h1>
+        <p class="page-description" style="color: #6b5a3a;">Новое поколение здоровья и красоты. Усовершенствованная модель с расширенным функционалом.</p>
+      </div>
+    </section>
+
+    <!-- Блок 1: Сама коробка -->
+    <section class="gold-block">
+      <div class="container gold-block__inner row-layout">
+        <div class="gold-image">
+          <img src="assets/massager-box.jpg" alt="Биоэнергомассажер 3.0 ФОНОВ">
+        </div>
+        <div class="gold-text">
+           <h2>Общие сведения</h2>
+           <p>Биоэнергомассажер 3.0 – это усовершенствованная модель с расширенным функционалом и новым дизайном. В устройстве сохранены функции предыдущего поколения, а также реализована новая технология ультразвукового воздействия.</p>
+           <p>БЭМ 3.0 является серийным продуктом собственной разработки компании FOHOW, который полностью отвечает трем принципам: обладает очевидным эффектом, абсолютно безопасен для здоровья и соответствует научным принципам культуры поддержания здоровья ЯН-ШЭН.</p>
+           <button class="btn btn--primary" style="margin-top: 16px;" data-modal-open="request" data-service="Биоэнергомассажер 3.0">Заказать прибор</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 2: Ультразвуковая насадка -->
+    <section class="gold-block" style="background: #fff;">
+      <div class="container gold-block__inner row-layout">
+        <div class="gold-text">
+          <h2>Ультразвуковая насадка БЭМ 3.0</h2>
+          <p>Обновленный БЭМ 3.0 дополняет новая ультразвуковая насадка для точечной проработки проблемных зон лица и тела!</p>
+          <h3>Особенности насадки:</h3>
+          <ul style="list-style-type: none; padding: 0;">
+            <li style="margin-bottom: 8px;">✨ Обладает мощной проницательной способностью;</li>
+            <li style="margin-bottom: 8px;">✨ Стимулирует усвоение питательных веществ;</li>
+            <li style="margin-bottom: 8px;">✨ Улучшает проницаемость сосудов;</li>
+            <li style="margin-bottom: 8px;">✨ Оказывает антибактериальный эффект;</li>
+            <li style="margin-bottom: 8px;">✨ Выраженный детоксикационный эффект;</li>
+            <li style="margin-bottom: 8px;">✨ Повышает мышечный тонус;</li>
+            <li style="margin-bottom: 8px;">✨ Подтягивает кожу и корректирует фигуру.</li>
+          </ul>
+        </div>
+        <div class="gold-image">
+          <img src="assets/massager-tool.jpg" alt="Ультразвуковая насадка">
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок 3: Гель -->
+    <section class="gold-block">
+      <div class="container gold-block__inner row-layout">
+        <div class="gold-image">
+          <img src="assets/massager-gel.jpg" alt="Увлажняющий гель Fohow">
+        </div>
+        <div class="gold-text">
+          <h2>Гель и эффект от процедур</h2>
+          <p>Научно-обоснованное действие ультразвуковой насадки в сочетании со специальным увлажняющим гелем FOHOW позволяет достигать эффекта подтяжки, глубокого увлажнения и питания всех слоев кожи.</p>
+          <p><strong>Эффект одной процедуры сопоставим с 10 посещениями косметического салона!</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВЫЙ БЛОК: Инфографика (Зоны применения) -->
+    <section class="gold-block" style="background: #fff;">
+      <div class="container">
+        <h2 style="color: #8c6e32; text-align: center; margin-bottom: 40px; font-size: 28px;">Зоны применения и сферы воздействия</h2>
+        
+        <div class="infographic-grid">
+          <img src="assets/massager-zone-face.jpg" alt="Лицо и головной отдел">
+          <img src="assets/massager-zone-back.jpg" alt="Шея, плечи, спина и руки">
+          <img src="assets/massager-zone-body.jpg" alt="Живот, грудь, бедра и ягодицы">
+          <img src="assets/massager-spheres.jpg" alt="Сферы применения и свойства">
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВЫЙ БЛОК: Текст в аккордеонах -->
+    <section class="gold-block" style="padding-top: 0;">
+      <div class="container" style="max-width: 900px;">
+        
+        <!-- Аккордеон 1 -->
+        <div class="acc-item">
+          <button class="acc-header" type="button">На каких частях тела можно проводить сеанс?</button>
+          <div class="acc-content">
+            <p><strong>Лицо:</strong> подтяжка кожи, формирование овала, достижение липидного баланса кожи, устранение пигментных пятен, морщин, рубцов и шрамов, отечностей и темных кругов вокруг глаз, уменьшение угревой сыпи.</p>
+            <p><strong>Шейный отдел:</strong> коррекция двойного подбородка, уменьшение складок и линий на шее, детоксикация лимфы, улучшение состояния при шейном спондилезе.</p>
+            <p><strong>Плечевой отдел:</strong> улучшение состояния кожи, профилактика болей, улучшение при плечелопаточном периартрите.</p>
+            <p><strong>Спина и поясница:</strong> подтяжка кожи, формирование красивых изгибов талии, уменьшение болей, профилактика заболеваний позвоночника.</p>
+            <p><strong>Живот:</strong> подтяжка кожи, уменьшение растяжек, улучшение перистальтики, укрепление функций матки и яичников.</p>
+            <p><strong>Грудь:</strong> детоксикация лимфы, формирование пышной формы, профилактика заболеваний молочной железы.</p>
+            <p><strong>Руки, бедра, ягодицы:</strong> подтяжка обвисшей кожи, лифтинг, уменьшение болей и ломоты.</p>
+            <p><strong>Голова:</strong> повышение энергии Ян, снятие стресса, улучшение кровообращения и когнитивных функций, стимуляция волосистой части головы.</p>
+          </div>
+        </div>
+
+        <!-- Аккордеон 2 -->
+        <div class="acc-item">
+          <button class="acc-header" type="button">Рекомендации после сеанса</button>
+          <div class="acc-content">
+            <p>В течение 2-х часов после сеанса не контактируйте с холодной водой (прием душа, мытье рук), избегайте холодного питья и пищи, не пейте крепкий чай (можно выпить теплую воду или подслащенный имбирный отвар).</p>
+            <p>Перед сеансом биомассажа и после него рекомендуется употребить эликсир «Феникс», а после окончания сеанса растереть спину энергетическим бальзамом FOHOW и накрыть тело пленкой.</p>
+          </div>
+        </div>
+
+        <!-- Аккордеон 3 -->
+        <div class="acc-item">
+          <button class="acc-header" type="button">Противопоказания</button>
+          <div class="acc-content">
+            <ul>
+              <li>Беременность (запрещено);</li>
+              <li>Инсульт (в период стабилизации запрещено);</li>
+              <li>Наличие электрокардиостимулятора;</li>
+              <li>Злокачественные опухоли;</li>
+              <li>Высокое внутричерепное давление;</li>
+              <li>Дети в период костного роста;</li>
+              <li>Запрещено использовать в области сердца, глаз, мозга.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Аккордеон 4 -->
+        <div class="acc-item">
+          <button class="acc-header" type="button">Комплектация БЭМ 3.0</button>
+          <div class="acc-content">
+            <ul>
+              <li>Главное устройство (1 шт.);</li>
+              <li>Пульт дистанционного управления (1 шт.);</li>
+              <li>Токопроводящие перчатки (1 пара);</li>
+              <li>Изоляционные перчатки (1 шт.);</li>
+              <li>Накладки с липким слоем и без (по 1 паре);</li>
+              <li>Адаптер (1 шт.);</li>
+              <li>Ультразвуковая насадка (1 пара);</li>
+              <li>Чехол для насадки (1 шт.);</li>
+              <li>Провода для подключения.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <button class="btn btn--primary btn--lg" data-modal-open="request" data-service="Биоэнергомассажер 3.0">Узнать стоимость и заказать</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a class="logo logo--footer" href="index.html">Империя Fohow</a>
+        <p>Центр здоровья и восстановления в самом сердце Сочи.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Наши специалисты</h4>
+        <ul class="contact-list">
+          <li><span class="contact-name">Ирина</span><a href="tel:+79881480048">+7 (988) 148-00-48</a></li>
+          <li><span class="contact-name">Алёна</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
+          <li><span class="contact-name">Иван</span><a href="tel:+79881434998">+7 (988) 143-49-98</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Адрес</h4>
+        <p>г. Сочи, ул. Навагинская, 9д, офис 418</p>
+        <div class="socials">
+          <a href="https://t.me/Imperiasintezaseo" target="_blank">Telegram</a>
+          <a href="https://www.instagram.com/imperiafohow/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© 2026 Центр «Империя Fohow». Все права защищены.</p>
+    </div>
+  </footer>
+
+  <!-- Модалка -->
+  <dialog class="modal" id="request-modal">
+    <form class="modal__form" id="request-form" novalidate>
+      <button class="modal__close" type="button" aria-label="Закрыть" data-modal-close>&times;</button>
+      <h2 class="modal__title">Оставьте заявку</h2>
+      <p class="modal__descr">Мы свяжемся с вами для уточнения деталей заказа.</p>
+      <label class="field"><span>Ваше имя</span><input class="input" type="text" name="name" required placeholder="Как к вам обращаться"></label>
+      <label class="field"><span>Телефон</span><input class="input" type="tel" name="phone" required placeholder="+7 (___) ___-__-__"></label>
+      <button class="btn btn--primary btn--block" type="submit">Отправить</button>
+      <p class="form-note" data-form-note></p>
+    </form>
+  </dialog>
+
+  <script src="js/main.js" defer></script>
+  
+  <!-- Скрипт для работы аккордеона -->
+  <script>
+    document.querySelectorAll('.acc-header').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        item.classList.toggle('is-open');
+      });
+    });
+  </script>
+</body>
+</html>
